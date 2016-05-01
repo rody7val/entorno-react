@@ -15,7 +15,9 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'jsx')
 app.set('view', engine.expressView)
 
-app.get('/', (req, res) => res.render('index', { title: IS_DEV ? 'Development' : 'Mi titulo' }))
+app.get('/', function(req, res) {
+	res.render('index', { title: IS_DEV ? 'Development' : 'Mi titulo' })
+})
 
 app.listen(port, err => {
 	if (err) { 
