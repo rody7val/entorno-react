@@ -12,8 +12,8 @@ export default class Index extends React.Component{
            <link rel='stylesheet' href='css/style.css' />
          </head>
          <body id='app'>
-           <img src='/img/logo.png' />
-           <p>Codigo del servidor.</p>
+          Cargando...
+          <script src='/bundle.js'></script>
          </body>
        </html>
     )
