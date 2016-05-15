@@ -6,7 +6,7 @@ import path from 'path'
 const app = express()
 const port = process.env.PORT || 8080
 
-app.use(favicon(__dirname + '/dist/favicon.ico'))
+app.use(favicon(__dirname + '/dist/production/favicon.ico'))
 app.use(express.static(path.join(__dirname, 'dist/production')))
 
 app.engine('.jsx', engine.server.create())
@@ -23,5 +23,5 @@ app.listen(port, err => {
 		return console.error(err);
 	}
 
-	console.log('Servidor funcionando en localhost:'+port)
+	console.log('Servidor funcionando en http://'+require('os').hostname()+':'+port)
 })
